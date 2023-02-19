@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ping</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/styl.css}" href="../static/styl.css">
+</head>
+<body>
+<h2>Customer informations</h2>
+<ul>
+    <li>Address: <strong th:text="${clientInfo.ip}">1.2.3.4</strong> (<span th:text="${clientInfo.host}">abc.com</span>)</li>
+    <li>Browser: <strong th:text="${clientInfo.userAgent}">IE</strong></li>
+</ul>
+
+</body>
+</html>

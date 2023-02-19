@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Show time 6</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/styl.css}" href="../static/styl.css">
+</head>
+<body>
+<h1>Time and date</h1>
+
+<h3>Three ways to insert an attribute value in the Thymeleaf</h3>
+<ul>
+    <li th:text="${dt}">Time 1</li>
+
+    <li data-th-text="${dt}">Time 2</li>
+
+    <li>This is result: [[${dt}]]</li>
+</ul>
+
+<h3>References to nested elements</h3>
+<ul>
+    <li>year: <strong th:text="${dt.year}">1997</strong></li>
+    <li>day of the year: <strong th:text="${dt.dayOfYear}">100</strong></li>
+    <li>day of the week: <strong th:text="${dt.dayOfWeek}">MONDAY</strong></li>
+    <li>second: <strong th:text="${dt.second}"></strong></li>
+
+    <li>date: <strong th:text="${dt.toLocalDate()}">2020-04-05</strong></li>
+    <li>time: <strong th:text="${dt.toLocalTime()}">10:44:22</strong></li>
+</ul>
+
+</body>
+</html>

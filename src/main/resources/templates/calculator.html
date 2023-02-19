@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Calculator</title>
+<link rel="stylesheet" type="text/css" th:href="@{/styl.css}" href="../static/styl.css">
+</head>
+<body>
+<h1>Calculator</h1>
+
+<form class="calculator" method="post">
+<input type="number" name="number1" th:value="${param.number1}">
+
+<select name="operation">
+	<option value="+">+</option>
+	<option value="-">-</option>
+	<option value="*">×</option>
+	<option value="/">÷</option>
+	<option value="%">mod</option>
+</select>
+
+<input type="number" name="number2" th:value="${param.number2}">
+<button>Calculate</button>
+</form>
+
+<div class="result" th:if="${result != null}">
+    <span th:text="${param.number1}">2</span>
+    <span th:text="${param.operation}">+</span>
+    <span th:text="${param.number2}">3</span>
+    =
+    <strong th:text="${result}">5</strong>
+</div>
+
+<div class="error" th:if="${error != null}" th:text="${error}">
+Error!
+</div>
+
+<div><a href="history" th:href="@{/calculator/history}">history of operations</a></div>
+<div><a href="history.json" th:href="@{/history.json}">history of operation in JSON</a></div>
+
+</body>
+</html>

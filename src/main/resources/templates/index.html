@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Contents</title>
+<link rel="stylesheet" type="text/css" th:href="@{/styl.css}">
+</head>
+<body>
+<h1>Contents</h1>
+
+<h2>Examples written directly in Controller</h2>
+<ul>
+<li><a th:href="@{/hello}">Hello</a></li>
+<li><a th:href="@{/ping}">Ping</a></li>
+
+<li><a th:href="@{/time1}">Object time</a> (json)</li>
+<li><a th:href="@{/time2}">Text time</a></li>
+<li><a th:href="@{/time3}">Text time</a> (text/plain)</li>
+<li><a th:href="@{/time4}">Time HTML in Java</a></li>
+</ul>
+
+<h2>Examples with templates</h2>
+<ul>
+<li><a th:href="@{/time5}">Time - simple template</a></li>
+<li><a th:href="@{/time6}">Time - expanded template</a></li>
+</ul>
+
+<h2>Example parameters</h2>
+<ul>
+<li><a th:href="@{/parameters/hi}">hi</a></li>
+<li><a th:href="@{/parameters/hi(name='Ala')}">hi?name=Ala</a></li>
+<li><a th:href="@{/parameters/repeat(text='Ola ma psa')}">repeat</a> n = 1</li>
+<li><a th:href="@{/parameters/repeat(text='Ala ma kota',n=10)}">repeat</a> n = 10</li>
+</ul>
+
+<h2>Examples of forms</h2>
+<ul>
+
+<li><a th:href="@{/calculator}">Calculator</a></li>
+<li><a th:href="@{/calculator/history}">Calculator history in HTML</a></li>
+<li><a th:href="@{/history.json}">Calculator history in JSON</a></li>
+</ul>
+
+</body>
+</html>
+

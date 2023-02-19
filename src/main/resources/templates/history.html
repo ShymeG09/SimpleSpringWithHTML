@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>History of operations</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/styl.css}" href="../static/styl.css">
+</head>
+<body>
+<h1>Calculator history</h1>
+<ul>
+    <li th:each="element: ${history}" th:text="${element}">2 + 2 = 4</li>
+</ul>
+<p><a th:href="@{/calculator}">Return to the calculator</a></p>
+</body>
+</html>
