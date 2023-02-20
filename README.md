@@ -10,4 +10,4 @@ I've created this to prove my skills.
 ## Setup
 I switched my app to port 8081 so keep that in mind while You trying to connect with it.
 ## Contact
-Created by @ShymeG - feel free to ask me anything!
+Created by @ShymeG09 - feel free to ask me anything!
